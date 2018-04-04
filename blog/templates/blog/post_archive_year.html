@@ -1,3 +1,10 @@
+{% extends "base.html" %}
+
+{% block title %}post_archive_year.html{% endblock %}
+
+{% block content %}
+<div id="content">
+
 <h1>Post Archives for {{ year|date:"Y" }}</h1>
 
 <ul>
@@ -12,7 +19,10 @@
     <ul>
         {% for post in object_list %}
         <li>{{ post.modify_date|date:"Y-m-d" }}&nbsp;&nbsp;&nbsp;
-            <a href="{{ post.get_absolute_url }}"><strong>{{ post.title }}</strong></a></li>
+        <a href="{{ post.get_absolute_url }}"><strong>{{ post.title }}</strong></a></li>
         {% endfor %}
     </ul>
 </div>
+
+</div>
+{% endblock %}
