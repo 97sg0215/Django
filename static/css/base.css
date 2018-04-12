@@ -8,15 +8,16 @@ div#header {
     position: absolute;
     top: 0px;
     left: 0px;
-    height: 30px;
+    height: 50px;
     width: 100%;
     display: table;
     background: pink;
+
 }
 
 div#menu {
     position: absolute;
-    top: 30px;
+    top: 50px;
     left: 0px;
     height: 20px;
     width: 100%;
@@ -29,7 +30,7 @@ div#menu {
 
 div#content {
     position: absolute;
-    top: 70px;
+    top: 90px;
     left: 50px;
     right: 50px;
 }
@@ -75,8 +76,6 @@ div#menu a:link, div#menu a:visited {
 div#menu > li {
     display: table-cell;
     vertical-align: middle;
-    border: 2px solid #bbb;
-    border-radius: 25px;
     text-align: center;
     font-weight: bold;
 }
