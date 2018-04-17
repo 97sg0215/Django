@@ -1,16 +1,21 @@
 
 {% extends "base.html" %}
+<head>
 
 {% block title %}Django Bookmark List{% endblock %}
-
+{% load staticfiles %}
+{% block extrastyle %}{% static "css/bookmark_list.css" %}{% endblock %}
+</head>
 {% block content %}
+<body>
 <div id="content">
-    <h1>Bookmark LIst</h1>
+    <h1>Bookmark List</h1>
 
-    <ul>
+    <ul class="rectangle-list">
         {% for bookmark in object_list %}
-            <li><a href="{% url 'bookmark:detail' bookmark.id %}">{{ bookmark }}</a></li> # 1
+            <li><a href="{% url 'bookmark:detail' bookmark.id %}">{{ bookmark }}</a></li>
         {% endfor %}
     </ul>
 </div>
+</body>
 {% endblock %}

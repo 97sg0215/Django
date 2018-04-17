@@ -8,9 +8,14 @@ div#content_home {
 div#home_img {
     width: 640px;
     background: #ddd;
-    margin: auto;
+    margin: 10px auto;
+    margin-top:0px;
     padding: 0px 0 1px 0;
     text-align: center;
+}
+
+table#applist {
+    margin: 0 auto;
 }
 
 
