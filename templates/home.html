@@ -6,10 +6,45 @@
 {% block extrastyle %}{% static "css/home.css" %}{% endblock %}
 
 {% block content %}
-<div id="content"_home>
-    <div id="homeimg">
-        <a href="/"><img src="{% static 'img/kaka.jpg' %}" style="height:256px;"/></a>
-        <h4 style="margin: 0;">This is Django powered web site.</h4>
+<div id="content_home">
+    <div id="home_img">
+       <!-- <a href="/"><img src="{% static 'img/webpro.jpg' %}" style="height:256px;"/></a>-->
+        <section class="container">
+		<input id="select1" type="radio" name="radioBanner" class="banner_input1" checked="">
+		<label for="select1" class="label_btn1">c</label>
+
+		<input id="select2" type="radio" name="radioBanner" class="banner_input2">
+		<label for="select2" class="label_btn2">l</label>
+
+		<input id="select3" type="radio" name="radioBanner" class="banner_input3">
+		<label for="select3" class="label_btn3">i</label>
+
+		<input id="select4" type="radio" name="radioBanner" class="banner_input4">
+		<label for="select4" class="label_btn4">c</label>
+
+        <input id="select5" type="radio" name="radioBanner" class="banner_input5">
+		<label for="select5" class="label_btn5">k</label>
+
+		<ul class="banner_mask" >
+			<li style="width:640px; margin:auto;">
+				<a href="#none"><img src="{% static 'img/bg_h.png' %}" style="height:256px;"  alt="첫번째 배너이미지"></a>
+			</li>
+			<li style="width:640px; margin:auto;">
+				<a href="#none"><img src="{% static 'img/webpro.jpg' %}" style="height:256px;" alt="두번째 배너이미지"></a>
+			</li>
+			<li style="width:640px; margin:auto;">
+				<a href="#none"><img src="{% static 'img/was.jpg' %}" style="height:256px;" alt="세번째 배너이미지"></a>
+			</li>
+			<li style="width:640px; margin:auto;">
+				<a href="#none"><img src="{% static 'img/serverlet.jpg' %}" style="height:256px;" alt="네번째 배너이미지"></a>
+			</li>
+            <li style="width:640px; margin:auto;">
+				<a href="#none"><img src="{% static 'img/directive.jpg' %}" style="height:256px;" alt="다섯번째 배너이미지"></a>
+			</li>
+		</ul>
+
+		</section>
+        <h4 style="margin: 0;">This is SOOGEYONG's StudyBlog for JSP.</h4>
     </div>
 
     <hr style="margin: 5px 0;">
@@ -44,6 +79,6 @@
 
 {% block footer %}
 <div id="footer">
-    &copy; makingfunk 2017
+    &copy; SG 2018
 </div>
 {% endblock footer %}
