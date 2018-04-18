@@ -1,44 +1,38 @@
 div#content_home {
     position: absolute;
-    top: 80px;
-    left: 110px;
-    right: 110px;
+    top: 100px;
+    width:100%;
+    padding:0;
+    margin:0px;
+    display:block;
 }
 
 div#home_img {
-    width: 640px;
-    background: #ddd;
-    margin: 10px auto;
-    margin-top:0px;
-    padding: 0px 0 1px 0;
+    width: 100%;
+    float:left;
+    margin:0px;
     text-align: center;
 }
 
-table#applist {
-    margin: 0 auto;
-}
-
-
 section.container {
 	position: relative;
-	width: 640px;
-	height: 270px;
-	margin: auto;
-
+	width: 100%;
+	height: 400px;
 }
 
 section ul.banner_mask {
 	overflow: hidden;
 	position: absolute;
 	padding:0;
-	width: 640px;
-	height: 256px;
+	margin:0;
+	width: 100%;
+	height: 400px;
 }
 
 section ul.banner_mask li {
 	position: absolute;
 	top: 0;
-	left: 660px;
+	left: 150%;
 }
 
 section.container label {
@@ -46,11 +40,11 @@ section.container label {
 	position: relative;
 	border-radius: 90px;
 	left: 10px;
-	top:5px;
+	top:95%;
 	margin-left: 5px;
 	width: 16px;
 	height: 16px;
-	background: #000;
+	background: #6f9b63;
 	color: #fff;
 	text-align: center;
 	line-height: 16px;
@@ -63,19 +57,13 @@ section.container input {
 }
 
 section.container input.banner_input1:checked ~ label.label_btn1,
-section.container input.banner_input2:checked ~ label.label_btn2,
-section.container input.banner_input3:checked ~ label.label_btn3,
-section.container input.banner_input4:checked ~ label.label_btn4
-section.container input.banner_input5:checked ~ label.label_btn5{
+section.container input.banner_input2:checked ~ label.label_btn2{
 	background: #999;
 	color: #fff;
 }
 
 section.container input.banner_input1:checked ~ .banner_mask li:nth-child(1),
-section.container input.banner_input2:checked ~ .banner_mask li:nth-child(2),
-section.container input.banner_input3:checked ~ .banner_mask li:nth-child(3),
-section.container input.banner_input4:checked ~ .banner_mask li:nth-child(4),
-section.container input.banner_input5:checked ~ .banner_mask li:nth-child(5) {
+section.container input.banner_input2:checked ~ .banner_mask li:nth-child(2){
 	animation: none;
 	transition: left 0.5s ease-in-out;
 	left: 0;
@@ -88,5 +76,68 @@ section.container input:checked ~ .banner_mask li {
 
 @keyframes slideOut {
 	0% {left: 0;}
-	100% {left: -650px;}
+	100% {left: -150%;}
+}
+
+
+#applist {
+    display:table;
+    position: relative;
+    margin: 50px auto;
+}
+
+
+td {
+    font: 15px 'trebuchet MS', 'lucida sans';
+    padding: 5;
+    margin-bottom: 4em;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+    counter-reset: li;
+    list-style: none;
+    vertical-align: middle;
+}
+
+
+.rectangle-list a{
+    position: relative;
+    display: block;
+    padding: .4em .4em .4em .8em;
+    *padding: .4em;
+    margin: .5em 0 .5em 2.5em;
+    background: #fa8072;
+    color: #444;
+    text-decoration: none;
+    transition: all .3s ease-out;
+}
+
+.rectangle-list a:hover{
+    background: #eee;
+}
+
+.rectangle-list a:before{
+    position: absolute;
+    left: -2.5em;
+    top: 50%;
+    margin-top: -1em;
+    background: #fa8072;
+    height: 2em;
+    width: 2em;
+    line-height: 2em;
+    text-align: center;
+    font-weight: bold;
+}
+
+.rectangle-list a:after{
+    position: absolute;
+    content: '';
+    border: .5em solid transparent;
+    left: -1em;
+    top: 50%;
+    margin-top: -.5em;
+    transition: all .3s ease-out;
+}
+
+.rectangle-list a:hover:after{
+    left: -.5em;
+    border-left-color: #fa8072;
 }

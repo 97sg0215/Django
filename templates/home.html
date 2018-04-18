@@ -8,70 +8,48 @@
 {% block content %}
 <div id="content_home">
     <div id="home_img">
-       <!-- <a href="/"><img src="{% static 'img/webpro.jpg' %}" style="height:256px;"/></a>-->
         <section class="container">
 		<input id="select1" type="radio" name="radioBanner" class="banner_input1" checked="">
-		<label for="select1" class="label_btn1">c</label>
+		<label for="select1" class="label_btn1">1</label>
 
 		<input id="select2" type="radio" name="radioBanner" class="banner_input2">
-		<label for="select2" class="label_btn2">l</label>
+		<label for="select2" class="label_btn2">2</label>
 
-		<input id="select3" type="radio" name="radioBanner" class="banner_input3">
-		<label for="select3" class="label_btn3">i</label>
 
-		<input id="select4" type="radio" name="radioBanner" class="banner_input4">
-		<label for="select4" class="label_btn4">c</label>
 
-        <input id="select5" type="radio" name="radioBanner" class="banner_input5">
-		<label for="select5" class="label_btn5">k</label>
-
-		<ul class="banner_mask" >
-			<li style="width:640px; margin:auto;">
-				<a href="#none"><img src="{% static 'img/bg_h.png' %}" style="height:256px;"  alt="첫번째 배너이미지"></a>
+		<ul class="banner_mask">
+			<li>
+				<a href="#none"><img src="{% static 'img/main.jpg' %}" width="100%" height="400px" alt="첫번째 배너이미지"></a>
 			</li>
-			<li style="width:640px; margin:auto;">
-				<a href="#none"><img src="{% static 'img/webpro.jpg' %}" style="height:256px;" alt="두번째 배너이미지"></a>
-			</li>
-			<li style="width:640px; margin:auto;">
-				<a href="#none"><img src="{% static 'img/was.jpg' %}" style="height:256px;" alt="세번째 배너이미지"></a>
-			</li>
-			<li style="width:640px; margin:auto;">
-				<a href="#none"><img src="{% static 'img/serverlet.jpg' %}" style="height:256px;" alt="네번째 배너이미지"></a>
-			</li>
-            <li style="width:640px; margin:auto;">
-				<a href="#none"><img src="{% static 'img/directive.jpg' %}" style="height:256px;" alt="다섯번째 배너이미지"></a>
+			<li>
+				<a href="#none"><img src="{% static 'img/sub.jpg' %}" width="100%" height="400px"  alt="두번째 배너이미지"></a>
 			</li>
 		</ul>
 
 		</section>
-        <h4 style="margin: 0;">This is SOOGEYONG's StudyBlog for JSP.</h4>
     </div>
 
-    <hr style="margin: 5px 0;">
-
-
-    <table id="applist">
+	<table id="applist">
         <tr>
-        <td><b><i><a href="{% url 'bookmark:index' %}">Bookmark</a></i></b></td>
+        <td class="rectangle-list"><b><a href="{% url 'bookmark:index' %}">Bookmark</a></b></td>
             <td>You can write your own post and share to others. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo</td>
-            <td class="Edit"><i><a href="#">Add</a></i></td>
-            <td class="Edit"><i><a href="#">Change</a></i></td>
+            <td class="Edit"><a href="#">Add</a></td>
+            <td class="Edit"><a href="#">Change</a></td>
         </tr>
 
         <tr>
-            <td><b><i><a href="{% url 'blog:index' %}">Blog</a></i></b></td>
+            <td class="rectangle-list"><b><a href="{% url 'blog:index' %}">Blog</a></b></td>
             <td>You can write your own post and share to others. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo</td>
-            <td class="Edit"><i><a href="#">Add</a></i></td>
-            <td class="Edit"><i><a href="#">Change</a></i></td>
+            <td class="Edit"><a href="#">Add</a></td>
+            <td class="Edit"><a href="#">Change</a></td>
         </tr>
         <tr>
-            <td><b><i><a href="#">Photo</a></i></b></td>
+            <td class="rectangle-list"><b><a href="#">Photo</a></b></td>
             <td>You can write your own post and share to others. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo</td>
-            <td class="Edit"><i><a href="#">Add</a></i></td>
-            <td class="Edit"><i><a href="#">Change</a></i></td>
+            <td class="Edit"><a href="#">Add</a></td>
+            <td class="Edit"><a href="#">Change</a></td>
         </tr>
     </table>
-
 
 </div>
 {% endblock content %}
