@@ -23,7 +23,7 @@
     <li><a href="{% url 'home' %}">HOME</a></li>
     <li><a href="{% url 'bookmark:index' %}">BOOKMARK</a></li>
     <li><a href="{% url 'blog:index' %}">BLOG</a></li>
-    <li><a href="#">PHOTO</a></li>
+    <li><a href="{% url 'photo:index' %}">PHOTO</a></li>
     <li><a href="#">ADD&bigtriangledown;</a>
       <ul class="dropdown">
             <li><a href="#">BOOKMARK</a></li>
@@ -39,7 +39,7 @@
         </ul>
     </li>
     <li><a href="{% url 'blog:post_archive' %}">ARCHIVE</a></li>
-    <li><a href="#">SEARCH</a></li>
+    <li><a href="{% url 'blog:search' %}">SEARCH</a></li>
     <li><a href="{% url 'admin:index' %}">ADMIN</a></li>
     </ul>
 </div>

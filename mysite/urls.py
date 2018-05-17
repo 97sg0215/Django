@@ -16,6 +16,10 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 from django.views.generic import ListView,DetailView
+from django.conf.urls.static import static
+from django.conf import settings
+
+from django.urls import path
 
 from mysite.views import HomeView
 
@@ -28,8 +32,9 @@ urlpatterns = [
     url(r'^$', HomeView.as_view(), name='home'),
     url(r'^bookmark/', include('bookmark.urls', namespace='bookmark')),
     url(r'^blog/', include('blog.urls', namespace='blog')),
+    url(r'^photo/', include('photo.urls', namespace='photo')),
 
    # url(r'^bookmark/$', ListView.as_view(model=Bookmark), name='index'),
    # url(r'^bookmark/(?P<pk>\d+)/$', DetailView.as_view(model=Bookmark), name='detail'),
 
-]
+] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
