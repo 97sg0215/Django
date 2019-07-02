@@ -11,4 +11,4 @@ class PostAdmin(admin.ModelAdmin):
 
 admin.site.register(Post,PostAdmin)
 
-#push test
+#push test > master
